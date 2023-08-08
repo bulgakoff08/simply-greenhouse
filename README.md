@@ -1,2 +1,6 @@
-# simply-greenhouse
-A simple factorio greenhouse that produces wood in a most stupid and simple way possible
+# Simply Greenhouse
+
+A Factorio mod that adds a greenhouse which produces wood in a most stupid and simple way possible
+
+(Wood + Water) => Saplings
+(Saplings + Greenhouse) => Wood
