@@ -41,15 +41,15 @@ end
 
 local function recipeWithIcon(category, duration, icon, recipeId, inputs, outputs)
     local result = recipe(category, duration, recipeId, inputs, outputs)
-    result["icon"] = "icons/recipes/" .. icon .. ".png"
+    result["icon"] = GRAPHICS_PATH .. "icons/recipes/" .. icon .. ".png"
     result["icon_size"] = 64
     return result
 end
 
 data:extend({
     recipe("crafting", 1, "sg-greenhouse", items("lab", 1, "small-lamp", 5, "landfill", 10), items("sg-greenhouse", 1)),
-    recipe("crafting-with-fluid", 10, "sg-sapling", items("wood", 1, "water", 100), items("sg-sapling", 4)),
-    recipeWithIcon("sg-greenhouse", 30, "sapling", "sg-grow-wood", items("sg-sapling", 40), items("wood", 40)), -- TODO: redraw icon to match logic
-    recipeWithIcon("crafting-with-fluid", 1, "drop", "sg-water-well", {}, items("water", 1000)), -- TODO: add water icon to graphics/icons/recipes
+    recipe("crafting-with-fluid", 1, "sg-sapling", items("wood", 1, "water", 100), items("sg-sapling", 4)),
+    recipeWithIcon("sg-greenhouse", 30, "grow-wood", "sg-grow-wood", items("sg-sapling", 40), items("wood", 40)),
+    recipeWithIcon("crafting-with-fluid", 1, "water-well", "sg-water-well", {}, items("water", 1000)),
     recipe("smelting", 1, "sg-charcoal", items("wood", 1), items("sg-charcoal", 3))
 })

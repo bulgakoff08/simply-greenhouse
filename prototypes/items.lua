@@ -26,7 +26,7 @@ local function machine (itemId, stackSize, subgroup)
 end
 
 data:extend({
-    fuel("other", "sg-charcoal", 100, "chemical", "2MJ"),
-    fuel("other", "sg-sapling", 100, "chemical", "1MJ"),
-    machine("other", "sg-greenhouse", 10)
+    fuel("sg-charcoal", 100, "intermediate-product", "2MJ"),
+    fuel("sg-sapling", 100, "intermediate-product", "1MJ"),
+    machine("sg-greenhouse", 10, "production-machine")
 })
