@@ -49,7 +49,16 @@ end
 data:extend({
     recipe("crafting", 1, "sg-greenhouse", items("lab", 1, "small-lamp", 5, "landfill", 10), items("sg-greenhouse", 1)),
     recipe("crafting-with-fluid", 1, "sg-sapling", items("wood", 1, "water", 100), items("sg-sapling", 4)),
-    recipeWithIcon("sg-greenhouse", 30, "grow-wood", "sg-grow-wood", items("sg-sapling", 40), items("wood", 40)),
-    recipeWithIcon("crafting-with-fluid", 1, "water-well", "sg-water-well", {}, items("water", 1000)),
-    recipe("smelting", 1, "sg-charcoal", items("wood", 1), items("sg-charcoal", 3))
+    recipeWithIcon("sg-greenhouse", 30, "grow-wood", "sg-grow-wood", items("sg-sapling", 40), items("wood", 40))
 })
+
+if settings.startup["sg-enable-charcoal-recipe"].value == "Yes" then
+    data:extend({
+        recipe("smelting", 1, "sg-charcoal", items("wood", 1), items("sg-charcoal", 3))
+    })
+end
+if settings.startup["sg-enable-water-recipe"].value == "Yes" then
+    data:extend({
+        recipeWithIcon("crafting-with-fluid", 1, "water-well", "sg-water-well", {}, items("water", 1000))
+    })
+end

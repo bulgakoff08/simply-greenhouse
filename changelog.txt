@@ -1,3 +1,7 @@
+Version 0.0.2 / 18-09-2023
+- Added settings to turn off charcoal recipe
+- Added settings to turn off water well recipe
+
 Version 0.0.1 Features:
 - Greenhouse
 - Water well recipe
