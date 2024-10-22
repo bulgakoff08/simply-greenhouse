@@ -1,3 +1,6 @@
+Version 0.0.3 / 22-10-2024
+- Updated Factorio version
+
 Version 0.0.2 / 18-09-2023
 - Added settings to turn off charcoal recipe
 - Added settings to turn off water well recipe

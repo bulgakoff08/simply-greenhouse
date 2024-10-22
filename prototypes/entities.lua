@@ -22,27 +22,33 @@ data:extend({
             {-2, -2},
             {2, 2}
         },
-        idle_animation = {
-            filename = GRAPHICS_PATH .. "entities/greenhouse-idle.png",
-            priority = "low",
-            width = 320,
-            height = 320,
-            frame_count = 1,
-            shift = {0.3, 0},
-            scale = 0.45
-        },
-        animation = {
-            filename = GRAPHICS_PATH .. "entities/greenhouse-working.png",
-            priority = "low",
-            width = 320,
-            height = 320,
-            frame_count = 1,
-            shift = {0.3, 0},
-            scale = 0.45
+        graphics_set = {
+            idle_animation = {
+                filename = GRAPHICS_PATH .. "entities/greenhouse-idle.png",
+                priority = "low",
+                width = 320,
+                height = 320,
+                frame_count = 1,
+                shift = {0.3, 0},
+                scale = 0.45
+            },
+            animation = {
+                filename = GRAPHICS_PATH .. "entities/greenhouse-working.png",
+                priority = "low",
+                width = 320,
+                height = 320,
+                frame_count = 1,
+                shift = {0.3, 0},
+                scale = 0.45
+            }
         },
         crafting_categories = {"sg-greenhouse"},
         crafting_speed = 1,
-        energy_source = {type = "electric", usage_priority = "primary-input", emissions_per_minute = -8},
+        energy_source = {
+            type = "electric",
+            usage_priority = "primary-input",
+            emissions_per_minute = {pollution = -10}
+        },
         energy_usage = "500kW",
         open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.85},
         close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75},
