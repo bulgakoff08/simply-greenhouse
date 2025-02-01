@@ -1,3 +1,6 @@
+Version 0.0.4 / 01-02-2025
+- Added capsules to plant trees
+
 Version 0.0.3 / 22-10-2024
 - Updated Factorio version
 

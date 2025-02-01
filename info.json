@@ -1,8 +1,8 @@
 {
 	"name": "simply-greenhouse",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"title": "Simply Greenhouse",
 	"author": "mad_engineer",
 	"factorio_version": "2.0",
-	"description": "Adds a greenhouse which produces wood in a most stupid and simple way possible"
+	"description": "Adds a greenhouse which produces wood in a most simple way possible and trees that you can plant"
 }
