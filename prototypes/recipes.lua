@@ -48,8 +48,8 @@ end
 
 data:extend({
     recipe("crafting", 1, "sg-greenhouse", items("lab", 1, "small-lamp", 5, "landfill", 10), items("sg-greenhouse", 1)),
-    recipe("crafting-with-fluid", 1, "sg-sapling", items("wood", 1, "water", 100), items("sg-sapling", 4)),
-    recipeWithIcon("sg-greenhouse", 30, "grow-wood", "sg-grow-wood", items("sg-sapling", 40), items("wood", 40)),
+    recipe("crafting-with-fluid", 1, "sg-sapling", items("wood", settings.startup["sg-wood-input-amount"].value, "water", 100), items("sg-sapling", 4)),
+    recipeWithIcon("sg-greenhouse", settings.startup["sg-greenhouse-recipe-duration"].value, "grow-wood", "sg-grow-wood", items("sg-sapling", 40), items("wood", 40)),
     recipe("crafting", 0.5, "sg-capsule-housing", items("iron-plate", 5, "coal", 10), items("sg-capsule-housing", 10))
 })
 
@@ -61,7 +61,7 @@ end
 
 if settings.startup["sg-enable-charcoal-recipe"].value == "Yes" then
     data:extend({
-        recipe("smelting", 1, "sg-charcoal", items("wood", 1), items("sg-charcoal", 3))
+        recipe("smelting", 1, "sg-charcoal", items("wood", 1), items("sg-charcoal", settings.startup["sg-charcoal-output-amount"].value))
     })
 end
 if settings.startup["sg-enable-water-recipe"].value == "Yes" then

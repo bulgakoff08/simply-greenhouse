@@ -1,3 +1,9 @@
+Version 0.0.5 / 07-02-2025
+- Added recipe settings for:
+    + wood grow duration
+    + wood input amount for saplings production
+    + output amount of charcoal after wood burning
+
 Version 0.0.4 / 01-02-2025
 - Added capsules to plant trees
 
