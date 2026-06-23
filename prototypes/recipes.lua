@@ -31,7 +31,7 @@ local function recipe(category, duration, recipeId, inputs, outputs)
     return {
         type = "recipe",
         name = recipeId,
-        category = category,
+        categories = {category},
         energy_required = duration,
         ingredients = inputs,
         results = outputs,
@@ -63,6 +63,11 @@ if settings.startup["sg-enable-charcoal-recipe"].value == "Yes" then
     data:extend({
         recipe("smelting", 1, "sg-charcoal", items("wood", 1), items("sg-charcoal", settings.startup["sg-charcoal-output-amount"].value))
     })
+    if mods["space-age"] then
+        data:extend({
+            recipe("crafting", 0.5, "sg-carbon", items("sg-charcoal", 2), items("carbon", 1))
+        })
+    end
 end
 if settings.startup["sg-enable-water-recipe"].value == "Yes" then
     data:extend({
