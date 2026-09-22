@@ -14,7 +14,9 @@ end
 local function fuel (itemId, stackSize, subgroup, energyValue)
     local result = item(itemId, stackSize, subgroup)
     result["fuel_value"] = energyValue
-    result["fuel_category"] = "chemical"
+    result["fuel_categories"] = {
+        "chemical"
+    }
     result["fuel_emissions_multiplier"] = 0.5 -- wow, so eco-friendly!
     return result
 end
